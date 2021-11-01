@@ -145,17 +145,17 @@ zapish_init() {
 		exit 1
 	fi
 
-	echo zapish_url=\"$zapish_url\"	> ~/.zapish.rc
-	echo zapish_auth=$(json_get "${zapish_result}" .result) >> ~/.zapish.rc
-	chmod 600 ~/.zapish.rc
+	echo zapish_url=\"$zapish_url\"	> ~/.config/zapish
+	echo zapish_auth=$(json_get "${zapish_result}" .result) >> ~/.config/zapish
+	chmod 600 ~/.config/zapish
 	echo "Zabbix API authentication successful. No Zabbix API call."
-	echo "zapish authentication token has been stored in ~/.zapish.rc"
+	echo "zapish authentication token has been stored in ~/.config/zapish"
 	exit 2
 }
 
 # initialization
-if [ -f  ~/.zapish.rc ]; then
-	. ~/.zapish.rc
+if [ -f  ~/.config/zapish ]; then
+	. ~/.config/zapish
 else
 	zapish_init
 fi

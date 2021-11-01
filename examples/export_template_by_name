@@ -9,7 +9,7 @@ else
 	exit 1
 fi
 
-template_name="ICMP"
+template_name=${1:-"ICMP"}
 
 templates=$(zabbix_api template.get \
 	"$(json_list params \
@@ -38,5 +38,5 @@ xml_output=$(zabbix_api configuration.export \
 )
 
 echo "Template: id=${templateid}, Name=\"${template_name}\" dump to ${template_name}.xml and ${template_name}.raw"
-echo ${xml_output} | jq -r .result | xmllint --format - > ${template_name}.xml
-echo ${xml_output} | jq .result > ${template_name}.raw
+echo ${xml_output} | jq -r .result | xmllint --format - > "${template_name}.xml"
+echo ${xml_output} | jq .result > "${template_name}.raw"

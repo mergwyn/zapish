@@ -28,7 +28,7 @@ zapish.1: zapish.1.xml
 
 install:
 	$(MKDIR_P) "$(DESTDIR)$(man3dir)" "$(DESTDIR)$(pkglibexecdir)"
-	$(INSTALL_DATA) zapish.inc.1 "$(DESTDIR)$(man1dir)"
+	$(INSTALL_DATA) zapish.1 "$(DESTDIR)$(man1dir)"
 	$(INSTALL_DATA) zapish.inc.3 "$(DESTDIR)$(man3dir)"
 	$(INSTALL_DATA) zapish.inc "$(DESTDIR)$(pkglibexecdir)"
 

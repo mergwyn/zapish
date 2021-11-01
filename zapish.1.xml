@@ -145,10 +145,10 @@ the GNU General Public License Version 2.
     <title>CONFIGURATION</title>
     <para>
       The <command>zapish.inc</command> functions uses following
-      configuration variables in <command>~/.zapish.rc</command>:
+      configuration variables in <command>~/.config/zapish</command>:
     </para>
     <para>
-      This scrip use <command>~/.zapish.rc</command> file which is generated on first use zapish.
+      This scrip use <command>~/.config/zapish</command> file which is generated on first use zapish.
     </para>
   </refsect1>
   <refsect1 id="files">
@@ -191,7 +191,7 @@ the GNU General Public License Version 2.
           <row>
             <entry>2</entry>
             <entry>
-              First use of zapish. Initialization has been done and <command>~/.zapish.rc</command> file has been created sucessfully
+              First use of zapish. Initialization has been done and <command>~/.config/zapish</command> file has been created sucessfully
             </entry>
           </row>
           <row>

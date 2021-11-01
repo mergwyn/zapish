@@ -7,7 +7,7 @@ It consists of few functions for:
 * construct JSON string fields like string, numeric and arrays
 * the main zabbix_api function which is used to call Zabbix API
 * JSON return values parser/extractor
-* the zapish_init function which reads ~/.zapish.rc configuration file or initialize if it does not exist
+* the zapish_init function which reads ~/.config/zapish configuration file or initialize if it does not exist
 
 ---
 At the moment zapish.inc is not fully POSIX SH compliant because it uses in few places "local" keyword to define functions local variables. However, the
