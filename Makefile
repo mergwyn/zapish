@@ -26,7 +26,7 @@ zapish.1: zapish.1.xml
 		--stringparam "man.output.base.dir" "0" \
 		-nonet http://docbook.sourceforge.net/release/xsl/current/manpages/profile-docbook.xsl $<
 
-install:
+install: all
 	$(MKDIR_P) "$(DESTDIR)$(man3dir)" "$(DESTDIR)$(pkglibexecdir)"
 	$(INSTALL_DATA) zapish.1 "$(DESTDIR)$(man1dir)"
 	$(INSTALL_DATA) zapish.inc.3 "$(DESTDIR)$(man3dir)"
